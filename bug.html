@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Incorrect use of querySelectorAll without proper handling of NodeList
+    const divs = document.querySelectorAll('div');
+    divs.style.display = 'none'; //Error: divs is a NodeList, not a single element
+  </script>
+</body>
+</html>
